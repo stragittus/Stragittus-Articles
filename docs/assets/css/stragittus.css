@@ -138,3 +138,67 @@
 .md-toc__link:visited {
   color: inherit;
 }
+/* ===============================
+   Right TOC — force override
+   =============================== */
+
+/* Base */
+.md-sidebar--secondary .md-toc .md-toc__link {
+  color: var(--strag-text) !important;
+}
+
+/* Hover */
+.md-sidebar--secondary .md-toc .md-toc__link:hover {
+  color: var(--strag-red) !important;
+}
+
+/* Active */
+.md-sidebar--secondary .md-toc .md-toc__link--active {
+  color: var(--strag-red) !important;
+  font-weight: 600;
+}
+
+/* Kill blue link/visited */
+.md-sidebar--secondary .md-toc a:link,
+.md-sidebar--secondary .md-toc a:visited {
+  color: inherit !important;
+}
+/* TOC nuclear test */
+.md-toc a,
+.md-toc__link,
+.toc a {
+  color: var(--strag-red) !important;
+}
+body::before { content: "CSS-LOADED"; position: fixed; bottom: 8px; right: 8px; background: #a70000; color: #fff; padding: 4px 8px; z-index: 9999; font-size: 12px; }
+/* ===============================
+   Right sidebar TOC (Material nav)
+   =============================== */
+
+.md-sidebar--secondary .md-nav__title {
+  color: var(--strag-text) !important;
+}
+
+.md-sidebar--secondary .md-nav__link {
+  color: var(--strag-text) !important;
+}
+
+.md-sidebar--secondary .md-nav__link:hover {
+  color: var(--strag-red) !important;
+}
+
+/* Actif: selon versions, actif sur le link OU sur le parent item */
+.md-sidebar--secondary .md-nav__link--active {
+  color: var(--strag-red) !important;
+  font-weight: 600;
+}
+
+.md-sidebar--secondary .md-nav__item--active > .md-nav__link {
+  color: var(--strag-red) !important;
+  font-weight: 600;
+}
+
+/* Kill blue link/visited */
+.md-sidebar--secondary .md-nav a:link,
+.md-sidebar--secondary .md-nav a:visited {
+  color: inherit !important;
+}
