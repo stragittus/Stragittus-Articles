@@ -1,0 +1,140 @@
+/* =========================================================
+   Stragittus — Light Editorial Theme
+   Aligned with www.stragittus.com
+   ========================================================= */
+
+:root {
+  --strag-red: #a70000;
+  --strag-text: #111111;
+  --strag-text-muted: #555555;
+  --strag-border: #e5e5e5;
+  --strag-bg: #ffffff;
+  --strag-bg-soft: #f5f5f5;
+}
+
+/* -------- Global -------- */
+
+.md-main {
+  background: var(--strag-bg);
+}
+
+.md-content {
+  color: var(--strag-text);
+}
+
+/* -------- Header / Top -------- */
+
+.md-header,
+.md-tabs {
+  background: var(--strag-bg);
+  border-bottom: 1px solid var(--strag-border);
+}
+
+.md-header__title {
+  color: var(--strag-text);
+  font-weight: 600;
+}
+
+/* -------- Sidebar -------- */
+
+.md-sidebar__scrollwrap {
+  background: transparent;
+}
+
+.md-nav__title,
+.md-nav__link {
+  color: var(--strag-text);
+}
+
+/* -------- Navigation states (Stragittus) -------- */
+
+/* Lien actif – vrai sélecteur Material */
+.md-nav__item--active > .md-nav__link {
+  color: var(--strag-red) !important;
+  font-weight: 600;
+}
+
+/* Hover */
+.md-nav__link:hover {
+  color: var(--strag-red);
+}
+
+/* -------- Typography -------- */
+
+/* H1 = titre de section (rouge Stragittus) */
+.md-content__inner > h1 {
+  color: var(--strag-red);
+  font-weight: 700;
+}
+
+/* Autres titres */
+.md-typeset h2,
+.md-typeset h3 {
+  color: var(--strag-text);
+}
+
+.md-typeset h2 {
+  border-bottom: 1px solid var(--strag-border);
+  padding-bottom: 0.2em;
+}
+
+/* -------- Links / accent -------- */
+
+.md-typeset a {
+  color: var(--strag-red);
+}
+
+.md-typeset a:hover {
+  text-decoration: underline;
+}
+
+/* -------- Search -------- */
+
+.md-search__form {
+  background: var(--strag-bg-soft);
+  border: 1px solid var(--strag-border);
+  border-radius: 10px;
+}
+
+.md-search__input {
+  color: var(--strag-text);
+}
+
+/* -------- Footer -------- */
+
+.md-footer {
+  background: var(--strag-bg-soft);
+  border-top: 1px solid var(--strag-border);
+  color: var(--strag-text-muted);
+}
+
+/* Remove Material branding */
+.md-footer-meta {
+  display: none;
+}
+
+/* ===============================
+   Right TOC (Table des matières)
+   =============================== */
+
+/* Liens du TOC */
+.md-toc__link {
+  color: var(--strag-text);
+}
+
+/* Hover */
+.md-toc__link:hover {
+  color: var(--strag-red);
+}
+
+/* Actif (section courante) */
+.md-toc__link--active {
+  color: var(--strag-red) !important;
+  font-weight: 600;
+}
+
+/* Désactiver le bleu par défaut */
+.md-toc__link:link,
+.md-toc__link:visited {
+  color: inherit;
+}

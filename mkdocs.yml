@@ -4,10 +4,19 @@ site_url: "https://stragittus.github.io/Stragittus-Articles/"
 theme:
   name: material
   language: fr
+  logo: assets/brand/logo.png
+  favicon: assets/brand/favicon.png
+  palette:
+    - scheme: default
+      primary: white
+      accent: red
   features:
     - navigation.instant
     - navigation.top
     - content.code.copy
+
+extra_css:
+  - assets/css/stragittus.css
 
 markdown_extensions:
   - tables
