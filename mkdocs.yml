@@ -1,0 +1,28 @@
+site_name: "Stragittus — Articles"
+site_url: "https://stragittus.github.io/Stragittus-Articles/"
+
+theme:
+  name: material
+  language: fr
+  features:
+    - navigation.instant
+    - navigation.top
+    - content.code.copy
+
+markdown_extensions:
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+
+plugins:
+  - search
+  - to-pdf:
+      output_path: pdf
+      enabled_if_env: CI
+
+nav:
+  - Accueil: index.md
+  - Articles: articles/index.md
+  - How-To: how-to/index.md
