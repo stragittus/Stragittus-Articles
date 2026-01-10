@@ -1,6 +1,6 @@
 /* =========================================================
-   Stragittus — Light Editorial Theme
-   Aligned with www.stragittus.com
+   Stragittus — Light Editorial Theme (MkDocs Material)
+   Goal: align with www.stragittus.com (light, red accent)
    ========================================================= */
 
 :root {
@@ -35,39 +35,65 @@
   font-weight: 600;
 }
 
-/* -------- Sidebar -------- */
+/* -------- Left navigation (primary) -------- */
 
-.md-sidebar__scrollwrap {
-  background: transparent;
-}
-
-.md-nav__title,
-.md-nav__link {
+.md-sidebar--primary .md-nav__title,
+.md-sidebar--primary .md-nav__link {
   color: var(--strag-text);
 }
 
-/* -------- Navigation states (Stragittus) -------- */
-
-/* Lien actif – vrai sélecteur Material */
-.md-nav__item--active > .md-nav__link {
+/* Active item (Material puts active state on the parent item) */
+.md-sidebar--primary .md-nav__item--active > .md-nav__link {
   color: var(--strag-red) !important;
-  font-weight: 600;
+  font-weight: 600 !important;
+}
+
+.md-sidebar--primary .md-nav__link:hover {
+  color: var(--strag-red) !important;
+}
+
+/* -------- Right TOC (secondary nav) -------- */
+/* In Material, the right "Table des matières" is a secondary nav:
+   .md-sidebar--secondary .md-nav--secondary ... */
+
+.md-sidebar--secondary .md-nav--secondary .md-nav__title {
+  color: var(--strag-text) !important;
+  font-weight: 600 !important; /* title readable, not overly heavy */
+}
+
+/* TOC links should be normal weight */
+.md-sidebar--secondary .md-nav--secondary .md-nav__link {
+  color: var(--strag-text) !important;
+  font-weight: 400 !important;
 }
 
 /* Hover */
-.md-nav__link:hover {
-  color: var(--strag-red);
+.md-sidebar--secondary .md-nav--secondary .md-nav__link:hover {
+  color: var(--strag-red) !important;
+}
+
+/* Active section in TOC (depends on version: link or parent item) */
+.md-sidebar--secondary .md-nav--secondary .md-nav__link--active,
+.md-sidebar--secondary .md-nav--secondary .md-nav__item--active > .md-nav__link {
+  color: var(--strag-red) !important;
+  font-weight: 600 !important;
+}
+
+/* Kill default blue in the secondary nav */
+.md-sidebar--secondary .md-nav--secondary a:link,
+.md-sidebar--secondary .md-nav--secondary a:visited {
+  color: inherit !important;
 }
 
 /* -------- Typography -------- */
 
-/* H1 = titre de section (rouge Stragittus) */
+/* Page title (H1) in red */
 .md-content__inner > h1 {
   color: var(--strag-red);
   font-weight: 700;
 }
 
-/* Autres titres */
+/* Other headings */
 .md-typeset h2,
 .md-typeset h3 {
   color: var(--strag-text);
@@ -78,7 +104,7 @@
   padding-bottom: 0.2em;
 }
 
-/* -------- Links / accent -------- */
+/* -------- Links in content -------- */
 
 .md-typeset a {
   color: var(--strag-red);
@@ -112,93 +138,37 @@
 .md-footer-meta {
   display: none;
 }
+/* =========================================================
+   Stragittus — Fix TOC right sidebar (Material)
+   Targets exactly: .md-sidebar--secondary nav.md-nav--secondary
+   ========================================================= */
 
-/* ===============================
-   Right TOC (Table des matières)
-   =============================== */
+.md-sidebar--secondary nav.md-nav--secondary label.md-nav__title {
+  color: var(--strag-text) !important;
+  font-weight: 600 !important;
+}
 
-/* Liens du TOC */
-.md-toc__link {
-  color: var(--strag-text);
+.md-sidebar--secondary nav.md-nav--secondary a.md-nav__link,
+.md-sidebar--secondary nav.md-nav--secondary a.md-nav__link span.md-ellipsis {
+  color: var(--strag-text) !important;
+  font-weight: 400 !important; /* <- enlève le gras */
 }
 
 /* Hover */
-.md-toc__link:hover {
-  color: var(--strag-red);
-}
-
-/* Actif (section courante) */
-.md-toc__link--active {
-  color: var(--strag-red) !important;
-  font-weight: 600;
-}
-
-/* Désactiver le bleu par défaut */
-.md-toc__link:link,
-.md-toc__link:visited {
-  color: inherit;
-}
-/* ===============================
-   Right TOC — force override
-   =============================== */
-
-/* Base */
-.md-sidebar--secondary .md-toc .md-toc__link {
-  color: var(--strag-text) !important;
-}
-
-/* Hover */
-.md-sidebar--secondary .md-toc .md-toc__link:hover {
+.md-sidebar--secondary nav.md-nav--secondary a.md-nav__link:hover,
+.md-sidebar--secondary nav.md-nav--secondary a.md-nav__link:hover span.md-ellipsis {
   color: var(--strag-red) !important;
 }
 
-/* Active */
-.md-sidebar--secondary .md-toc .md-toc__link--active {
+/* Active (quand tu scrolles, Material peut activer le lien) */
+.md-sidebar--secondary nav.md-nav--secondary a.md-nav__link--active,
+.md-sidebar--secondary nav.md-nav--secondary .md-nav__item--active > a.md-nav__link {
   color: var(--strag-red) !important;
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
-/* Kill blue link/visited */
-.md-sidebar--secondary .md-toc a:link,
-.md-sidebar--secondary .md-toc a:visited {
-  color: inherit !important;
-}
-/* TOC nuclear test */
-.md-toc a,
-.md-toc__link,
-.toc a {
-  color: var(--strag-red) !important;
-}
-body::before { content: "CSS-LOADED"; position: fixed; bottom: 8px; right: 8px; background: #a70000; color: #fff; padding: 4px 8px; z-index: 9999; font-size: 12px; }
-/* ===============================
-   Right sidebar TOC (Material nav)
-   =============================== */
-
-.md-sidebar--secondary .md-nav__title {
-  color: var(--strag-text) !important;
-}
-
-.md-sidebar--secondary .md-nav__link {
-  color: var(--strag-text) !important;
-}
-
-.md-sidebar--secondary .md-nav__link:hover {
-  color: var(--strag-red) !important;
-}
-
-/* Actif: selon versions, actif sur le link OU sur le parent item */
-.md-sidebar--secondary .md-nav__link--active {
-  color: var(--strag-red) !important;
-  font-weight: 600;
-}
-
-.md-sidebar--secondary .md-nav__item--active > .md-nav__link {
-  color: var(--strag-red) !important;
-  font-weight: 600;
-}
-
-/* Kill blue link/visited */
-.md-sidebar--secondary .md-nav a:link,
-.md-sidebar--secondary .md-nav a:visited {
+/* Empêche le bleu link/visited */
+.md-sidebar--secondary nav.md-nav--secondary a:link,
+.md-sidebar--secondary nav.md-nav--secondary a:visited {
   color: inherit !important;
 }
