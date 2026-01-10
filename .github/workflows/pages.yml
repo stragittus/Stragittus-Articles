@@ -36,7 +36,8 @@ jobs:
         env:
           CI: "true"
         run: |
-          mkdocs build --clean
+          mkdocs build -f mkdocs.ci.yml --clean
+
 
       # MkDocs écrit dans ./site
       # Le plugin PDF (to-pdf) écrit dans ./pdf (à la racine du repo)

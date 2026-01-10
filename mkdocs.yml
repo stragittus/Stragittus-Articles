@@ -18,9 +18,6 @@ markdown_extensions:
 
 plugins:
   - search
-  - to-pdf:
-      output_path: pdf
-      enabled_if_env: CI
 
 nav:
   - Accueil: index.md
