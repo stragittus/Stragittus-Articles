@@ -1,1 +1,3 @@
-Stragittus-Articles
+mkdocs
+mkdocs-material
+mkdocs-to-pdf
