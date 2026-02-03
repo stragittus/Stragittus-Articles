@@ -1,4 +1,4 @@
-# Configurer l’IA avec la PNL (Programmation Neuro‑Linguistique)
+# Configurer l’IA avec la PNL (Programmation Neuro-Linguistique)
 
 ## Auto‑modélisation, cadre de décision et angles morts
 
@@ -129,7 +129,7 @@ Deux autres éléments se sont imposés naturellement.
 
 D’abord, un **horizon explicite** : 2038. Pas comme un objectif chiffré. Comme un repère. Une décision n’est valable que si elle reste saine dans le temps.
 
-Ensuite, des **contextes clairement séparés** (professionel, personnel, famille, enfants, ...). Sans exposer leur contenu. Juste le fait qu’ils existent. Parce que la même question, dans un contexte différent, appelle une réponse différente.
+Ensuite, des **contextes clairement séparés** (professionnel, personnel, famille, enfants…). Sans exposer leur contenu. Juste le fait qu’ils existent. Parce que la même question, dans un contexte différent, appelle une réponse différente.
 
 Ce n’est pas du détail. C’est ce qui évite les réponses génériques ou déplacées.
 
@@ -154,6 +154,21 @@ SHADOW, c’est l’activation volontaire d’un cadre opposé. Autres valeurs. 
 
 Pas pour y rester.
 Mais pour voir **ce que mon cadre excluait**.
+
+Avec le recul, je vois SHADOW comme quelque chose de différent du méta‑rôle.
+
+Le **METAROLE** agit surtout au niveau conscient : structure, valeurs, critères, décisions.
+
+**SHADOW**, lui, touche à des couches moins conscientes. Parfois plus émotionnelles. Plus brutes. Celles qu’on met facilement de côté parce qu’elles dérangent le cadre.
+
+Quand j’active SHADOW, les réponses changent nettement.
+
+Elles sont souvent plus directes. Parfois inconfortables. Moins diplomatiques.
+
+Mais aussi plus authentiques, plus alignées avec une forme de vérité que le cadre principal a tendance à lisser.
+
+Ce n’est pas toujours agréable.
+Mais c’est souvent juste.
 
 ---
 
@@ -182,7 +197,7 @@ Aujourd’hui, le méta‑rôle est :
 * un fichier YAML d’un peu plus de **300 lignes**,
 * versionné dans Git,
 * utilisé comme source de vérité,
-* décliné en Markdown, puis raccourci en custom instructions
+* décliné en Markdown, puis raccourci en *custom instructions*,
 * et attaché à des projets IA concrets.
 
 Pas pour faire joli.
@@ -214,32 +229,15 @@ C’est clairement un terrain que j’ai envie d’explorer.
 
 Avec le méta‑rôle en place, quelque chose a changé assez nettement.
 
-Les réponses de l’IA sont devenues plus **directes**, plus **cohérentes**, plus **prévisibles** — dans le bon sens du terme.
+Je reformule beaucoup moins mes questions. Je passe moins de temps à corriger le cadre, à rappeler des règles implicites, à repréciser ce que j’attends.
 
-Surtout, elles me ressemblent davantage.
+Les réponses vont plus vite à l’essentiel. Elles sont plus courtes, plus directes, et surtout plus cohérentes d’une discussion à l’autre.
 
-Pas dans le style ou les mots.
-Mais dans les **arbitrages**.
-
-Je passe beaucoup moins de temps à corriger le cadre. Je peux me concentrer sur le fond.
+Et il y a un effet plus difficile à mesurer, mais très réel : **moins de fatigue mentale**. Je ne me bats plus contre l’outil. Je dialogue avec lui dans un cadre que je reconnais.
 
 J’ai aussi davantage confiance dans les réponses. Pas parce qu’elles sont toujours justes — mais parce que je comprends **d’où elles viennent**.
 
 Et ça change profondément la relation.
-
----
-
-## METAROLE et SHADOW, deux niveaux différents
-
-Avec le recul, je vois assez clairement la différence entre les deux.
-
-Le **METAROLE** correspond à la partie consciente, structurée, rationnelle. Celle qui pose le cadre, les valeurs, les critères.
-
-**SHADOW**, lui, touche à autre chose.
-
-À ce qui est moins conscient. Plus émotionnel parfois. À ce qui a tendance à être oublié, mis de côté, ou jugé inconfortable.
-
-SHADOW n’est pas là pour décider à la place du méta‑rôle. Il est là pour rappeler que toute carte a ses angles morts.
 
 ---
 
