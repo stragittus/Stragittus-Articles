@@ -1,0 +1,250 @@
+```yaml
+openspec:
+  kind: linkedin-article
+  version: 1.0.0
+  language:
+    primary: fr
+    secondary: en
+    bilingual:
+      order: [fr, en]
+      notice_fr: "English version below."
+      notice_en: "Version française ci-dessus."
+      translation_policy: faithful
+
+meta_role:
+  name: "ECOS-AI / Meta-Role"
+  purpose:
+    - governance_frame
+    - cognitive_load_reduction
+    - long_term_coherence
+  long_term_horizon:
+    label: "2038"
+    intent: "Ancrer les arbitrages hors du court terme (sobriété, cohérence, transmission)."
+    privacy: "Ne rien révéler de privé ; expliquer uniquement le rôle du repère temporel."
+  contexts:
+    intent: "Séparer les sphères (pro/perso) pour éviter les mélanges et réponses déplacées."
+    disclosure_policy:
+      - "Nommer l’existence de plusieurs contextes"
+      - "Ne pas dévoiler leur contenu"
+      - "Ne pas citer d’informations strictement privées"
+
+shortcuts:
+  - token: "/METAROLE"
+    meaning_fr: "Active explicitement le cadre principal (valeurs, croyances, métaprogrammes, identité, transpersonnel) comme base de gouvernance."
+    meaning_en: "Explicitly activates the main governance frame (values, beliefs, metaprograms, identity, transpersonal)."
+    usage_notes:
+      - "À utiliser au début d’une conversation quand on veut un cadre stable et sobre"
+      - "Peut être réactivé en cours de conversation"
+  - token: "/SHADOW"
+    meaning_fr: "Active un cadre volontairement opposé au METAROLE pour explorer angles morts et contre-points de vue."
+    meaning_en: "Activates an intentionally opposite frame to explore blind spots and counter-views."
+    usage_notes:
+      - "Temporaire, conscient, réversible"
+      - "Ne remplace pas le METAROLE : le suspend"
+
+article:
+  title:
+    fr: "Configurer l’IA avec la PNL (Programmation Neuro-Linguistique) : l’auto-modélisation comme méthode"
+    en: "Configuring AI with NLP (Neuro-Linguistic Programming): Auto-Modeling as a Method"
+  positioning:
+    intent: "Déplacer le regard du prompt engineering vers la modélisation (PNL) et la gouvernance (cadres)."
+    guardrails:
+      - "Pas de posture d’autorité"
+      - "Pas de prosélytisme PNL"
+      - "Pas de promesse magique sur l’IA"
+      - "Distinguer faits / interprétations / hypothèses"
+      - "Signaler l’incertitude"
+  audience:
+    primary:
+      - "ingénieurs et profils techniques francophones (IA connue, PNL connue de loin)"
+      - "architectes / consultants senior"
+    secondary:
+      - "praticiens PNL curieux des usages IA"
+      - "personnes intéressées par gouvernance, responsabilité, temps long"
+
+concepts:
+  core_thesis:
+    fr: "Configurer une IA revient à expliciter une carte du monde. Un prompt agit bas (comportements). Un méta-rôle agit haut (valeurs, identité, transpersonnel)."
+    en: "Configuring an AI means making a world model explicit. A prompt operates low (behavior). A meta-role operates high (values, identity, transpersonal)."
+  pnl_modeling:
+    definition_fr: "En PNL, modéliser consiste à expliciter ce qui rend une compétence transférable (structures, critères, stratégies), au-delà de la personne."
+    definition_en: "In NLP, modeling means making a skill transferable (structures, criteria, strategies) beyond the individual."
+    purpose_fr: "Transférer une compétence / un talent / une manière de décider."
+    purpose_en: "Transfer a skill / talent / way of deciding."
+  self_modeling:
+    intent_fr: "Je voulais que l’IA réponde ‘comme moi’ (mêmes critères), donc je me suis auto-modélisé."
+    intent_en: "I wanted the AI to respond ‘like me’ (same criteria), so I self-modeled."
+  logical_levels:
+    terms_required:
+      - valeurs
+      - croyances
+      - métaprogrammes
+      - identité
+      - transpersonnel
+    levels:
+      - environnement
+      - comportements
+      - capacités
+      - croyances
+      - valeurs
+      - identité
+      - transpersonnel
+    mapping_to_ai:
+      environnement: "contextes, mémoire, outils, contraintes"
+      comportements: "style de réponse, formats, actions"
+      capacités: "raisonnement, structuration, synthèse"
+      croyances: "ce qui est tenu pour fiable / vrai"
+      valeurs: "critères de décision (sobriété, clarté, long terme)"
+      identité: "rôle de l’IA (co-pilote, pas décideur)"
+      transpersonnel: "finalité, horizon, responsabilité élargie"
+
+metarole_genesis:
+  narrative_arc:
+    fr:
+      - "Gêne initiale : incohérences, bruit, fatigue cognitive à recadrer l’IA"
+      - "Itération 1 : rôles simples (insuffisant : comportement seulement)"
+      - "Itération 2 : règles (vérité, structure, formats) → amélioration"
+      - "Bascule : PNL explicite (carte du monde, niveaux logiques)"
+      - "Auto-modélisation : expliciter mes critères pour que l’IA réponde ‘comme moi’"
+      - "Angles morts : toute carte exclut → naissance de SHADOW"
+      - "Shortcuts : rendre les bascules explicites (/METAROLE, /SHADOW)"
+      - "Ingénierie : versioning Git + YAML→MD→Custom Instructions"
+      - "Portabilité : annexer YAML/MD à des projets IA"
+    en: "faithful_translation"
+
+operating_model:
+  baseline_plus_overlays:
+    principle_fr: "Le METAROLE est le socle. On peut superposer un rôle spécifique (développeur logiciel, penseur, psychothérapeute) sans changer le cap."
+    principle_en: "The METAROLE is the baseline. You can overlay a specific role (software developer, thinker, psychotherapist) without changing the underlying direction."
+    examples:
+      - fr: "Après /METAROLE : ‘Adopte ensuite le rôle d’un développeur logiciel senior.’"
+        en: "After /METAROLE: ‘Then adopt the role of a senior software developer.’"
+      - fr: "Après /METAROLE : ‘Adopte ensuite le rôle d’un penseur / psychothérapeute.’"
+        en: "After /METAROLE: ‘Then adopt the role of a thinker / psychotherapist.’"
+
+shadow:
+  purpose:
+    fr:
+      - "Réactiver des points de vue occultés"
+      - "Casser l’auto-confirmation"
+      - "Explorer l’opposé sans le figer"
+    en: "faithful_translation"
+  positioning_fr: "SHADOW est une soupape de lucidité, pas un bug."
+  positioning_en: "SHADOW is a lucidity safety valve, not a bug."
+
+engineering:
+  git_versioning:
+    enabled: true
+    repo: "private or internal"
+    versioning_rules:
+      - "chaque changement est explicite, daté, versionné"
+      - "réversible (git)"
+  pipeline:
+    source_of_truth: "YAML"
+    generate:
+      - artifact: "Markdown"
+        purpose: "documentation lisible humain"
+      - artifact: "Custom Instructions"
+        purpose: "configuration exploitable par l’IA"
+  portability:
+    fr: "Les fichiers YAML/MD peuvent être annexés à des projets ChatGPT ou autres assistants IA pour garantir cohérence et traçabilité."
+    en: "YAML/MD files can be attached to ChatGPT projects or other AI assistants to ensure coherence and traceability."
+
+structure_4mat:
+  why:
+    fr:
+      - "On confond prompt et gouvernance"
+      - "On attribue à l’IA une neutralité qu’elle n’a pas"
+      - "La PNL rappelle : la carte n’est pas le territoire"
+    en: faithful_translation
+  what:
+    fr:
+      - "Définir modélisation PNL (transférer une compétence)"
+      - "Définir ‘carte du monde’ et lien avec configuration d’une IA"
+      - "Situer prompt vs méta-rôle dans les niveaux logiques"
+      - "Lever l’ambiguïté NLP (Neuro-Linguistic Programming vs Natural Language Processing)"
+    en: faithful_translation
+  how:
+    fr:
+      - "Raconter la genèse : itérations, manques détectés, ajustements"
+      - "Auto-modélisation : croyances, valeurs, métaprogrammes rendus explicites"
+      - "Expliciter le temps long (2038) et les contextes (sans contenu privé)"
+      - "Expliquer l’usage des shortcuts /METAROLE et /SHADOW (activation/désactivation à la demande)"
+      - "Montrer la superposition de rôles spécifiques au-dessus du socle"
+      - "Expliquer la chaîne d’ingénierie Git + YAML→MD→Custom Instructions + portabilité"
+    en: faithful_translation
+  what_if:
+    fr:
+      - "Toute modélisation oriente et crée des angles morts"
+      - "La maturité = savoir quand changer de cadre"
+      - "Question ouverte : quelles cartes délègues-tu sans les regarder ?"
+    en: faithful_translation
+
+examples:
+  usage_snippets:
+    - fr: "Début de conversation : /METAROLE puis je pose ma question."
+      en: "Start of a conversation: /METAROLE, then I ask my question."
+    - fr: "Exploration des angles morts : /SHADOW pour activer le contre-cadre."
+      en: "Exploring blind spots: /SHADOW to activate the counter-frame."
+    - fr: "Retour au socle : /METAROLE pour refermer le cadre."
+      en: "Back to baseline: /METAROLE to restore the main frame."
+
+linkedin_post:
+  constraints:
+    - "3 à 8 lignes"
+    - "mobile-friendly"
+    - "accroche dès les premières lignes"
+    - "pas de jargon IA inutile"
+    - "PNL et IA explicitement"
+    - "ne pas résumer l’article"
+  draft_direction:
+    fr:
+      - "Hook: ‘NLP’ est ambigu en anglais. C’est déjà un problème de modèle.’"
+      - "Tension: ‘Un prompt change un comportement. Qui change les valeurs ?’"
+      - "Promise: ‘Auto-modélisation PNL → méta-rôle → gouvernance de l’IA.’"
+      - "CTA: ‘Si tu utilises l’IA au quotidien, ça vaut le détour.’"
+    en: faithful_translation
+  tags:
+    core:
+      - "#PNL"
+      - "#ProgrammationNeuroLinguistique"
+      - "#IA"
+      - "#IntelligenceArtificielle"
+      - "#NLP"
+      - "#NeuroLinguisticProgramming"
+      - "#AutoModelisation"
+      - "#Modelisation"
+    governance:
+      - "#Gouvernance"
+      - "#Responsabilite"
+      - "#TempsLong"
+    pnl_terms:
+      - "#Valeurs"
+      - "#Croyances"
+      - "#Metaprogrammes"
+      - "#Identite"
+      - "#NiveauxLogiques"
+    ia_terms:
+      - "#AIGovernance"
+      - "#PromptEngineering"
+    targeted_optional:
+      - "#LIMOVA"
+      - "#YoanDrahi"
+
+privacy:
+  do_not_disclose:
+    - "détails des contextes"
+    - "informations familiales, adresses, données sensibles"
+    - "éléments strictement privés"
+  allowed:
+    - "décrire l’existence d’un horizon (2038) comme repère"
+    - "décrire l’existence de contextes séparés (pro/perso) sans contenu"
+
+success_criteria:
+  fr:
+    - "ingénieur francophone : comprend le lien PNL↔IA sans rejet"
+    - "praticien PNL : reconnaît modélisation + niveaux logiques"
+    - "lecteur IA : voit la différence prompt vs gouvernance"
+    - "le texte reste sobre, non dogmatique, et ouvre une question"
+  en: faithful_translation
+```
